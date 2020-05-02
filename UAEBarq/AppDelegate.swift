@@ -83,5 +83,47 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     
+    // handling firebase Deep Link
+    func application(_ application: UIApplication,
+                     continue userActivity: NSUserActivity,
+                     restorationHandler: @escaping ([UIUserActivityRestoring]?) -> Void) -> Bool {
+        
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+            let url = userActivity.webpageURL,
+            let host = url.host else {
+                return false
+        }
+
+        let isDynamicLinkHandled =
+            DynamicLinks.dynamicLinks().handleUniversalLink(url) { dynamicLink, error in
+
+                guard error == nil,
+                    let dynamicLink = dynamicLink,
+                    let urlString = dynamicLink.url?.absoluteString else {
+                        return
+                }
+                print("Dynamic link host: \(host)")
+                print("Dyanmic link url: \(urlString)")
+                print("Dynamic link match type: \(dynamicLink.matchType.rawValue)")
+            }
+        return isDynamicLinkHandled
+    }
+    
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+        if let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url) {
+            guard let urlString = dynamicLink.url?.absoluteString  else {
+                return false
+            }
+
+            print("Dyanmic link url: \(urlString)")
+            print("Dynamic link match type: \(dynamicLink.matchType.rawValue)")
+
+            return true
+        }
+
+        return false
+    }
 }
 

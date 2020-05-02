@@ -14,7 +14,6 @@
 		2815C27F245C6BEA00BC5CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2815C27D245C6BEA00BC5CD1 /* LaunchScreen.storyboard */; };
 		2815C28A245C6BEB00BC5CD1 /* UAEBarqTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C289245C6BEB00BC5CD1 /* UAEBarqTests.swift */; };
 		2815C295245C6BEB00BC5CD1 /* UAEBarqUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2815C294245C6BEB00BC5CD1 /* UAEBarqUITests.swift */; };
-		2865FD9D245CD2DE0089A41D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2865FD9C245CD2DE0089A41D /* GoogleService-Info.plist */; };
 		2865FDA1245CD4250089A41D /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865FD9F245CD4250089A41D /* AppRouter.swift */; };
 		2865FDA2245CD4250089A41D /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865FDA0245CD4250089A41D /* Request.swift */; };
 		2865FDA9245CD81F0089A41D /* Videos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865FDA7245CD81F0089A41D /* Videos.swift */; };
@@ -25,6 +24,7 @@
 		2865FDB4245CEDC80089A41D /* New_ControllerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865FDB3245CEDC80089A41D /* New_ControllerViewController.swift */; };
 		2865FDB7245CFA050089A41D /* GoogleMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865FDB6245CFA050089A41D /* GoogleMapsViewController.swift */; };
 		2865FDBC245D28B60089A41D /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2865FDBB245D28B60089A41D /* DoubleExtension.swift */; };
+		2865FDC0245E10AD0089A41D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2865FDBF245E10AD0089A41D /* GoogleService-Info.plist */; };
 		2ACF7F9B47C6335F40A5C4A8 /* Pods_UAEBarq.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 646BFC9A7FE3BCB49C7CD6DC /* Pods_UAEBarq.framework */; };
 		B79BD7CBB6B89BCEBA0B8600 /* Pods_UAEBarq_UAEBarqUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED723D1F28356AE4450DF690 /* Pods_UAEBarq_UAEBarqUITests.framework */; };
 		C63D50BA1FF8E99A554FDBFC /* Pods_UAEBarqTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B8983A6509E5BC876BA25A8 /* Pods_UAEBarqTests.framework */; };
@@ -63,7 +63,6 @@
 		2815C290245C6BEB00BC5CD1 /* UAEBarqUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UAEBarqUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2815C294245C6BEB00BC5CD1 /* UAEBarqUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UAEBarqUITests.swift; sourceTree = "<group>"; };
 		2815C296245C6BEB00BC5CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2865FD9C245CD2DE0089A41D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2865FD9F245CD4250089A41D /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		2865FDA0245CD4250089A41D /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		2865FDA7245CD81F0089A41D /* Videos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Videos.swift; sourceTree = "<group>"; };
@@ -74,6 +73,7 @@
 		2865FDB3245CEDC80089A41D /* New_ControllerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New_ControllerViewController.swift; sourceTree = "<group>"; };
 		2865FDB6245CFA050089A41D /* GoogleMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapsViewController.swift; sourceTree = "<group>"; };
 		2865FDBB245D28B60089A41D /* DoubleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
+		2865FDBF245E10AD0089A41D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		646BFC9A7FE3BCB49C7CD6DC /* Pods_UAEBarq.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UAEBarq.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8983A6509E5BC876BA25A8 /* Pods_UAEBarqTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UAEBarqTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		82472D0F0CA8C89DF0AEF35B /* Pods-UAEBarq.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UAEBarq.debug.xcconfig"; path = "Target Support Files/Pods-UAEBarq/Pods-UAEBarq.debug.xcconfig"; sourceTree = "<group>"; };
@@ -155,8 +155,8 @@
 				2815C278245C6BE900BC5CD1 /* Main.storyboard */,
 				2815C27B245C6BEA00BC5CD1 /* Assets.xcassets */,
 				2815C27D245C6BEA00BC5CD1 /* LaunchScreen.storyboard */,
+				2865FDBF245E10AD0089A41D /* GoogleService-Info.plist */,
 				2815C280245C6BEA00BC5CD1 /* Info.plist */,
-				2865FD9C245CD2DE0089A41D /* GoogleService-Info.plist */,
 			);
 			path = UAEBarq;
 			sourceTree = "<group>";
@@ -399,7 +399,7 @@
 			files = (
 				2815C27F245C6BEA00BC5CD1 /* LaunchScreen.storyboard in Resources */,
 				2865FDB1245CE1290089A41D /* VideosTableViewCell.xib in Resources */,
-				2865FD9D245CD2DE0089A41D /* GoogleService-Info.plist in Resources */,
+				2865FDC0245E10AD0089A41D /* GoogleService-Info.plist in Resources */,
 				2815C27C245C6BEA00BC5CD1 /* Assets.xcassets in Resources */,
 				2815C27A245C6BE900BC5CD1 /* Main.storyboard in Resources */,
 			);

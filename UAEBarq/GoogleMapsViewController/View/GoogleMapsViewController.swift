@@ -38,9 +38,18 @@ class GoogleMapsViewController: UIViewController, GMSMapViewDelegate{
     }
     func addMarker(latitude: Double, longitude: Double){
         let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: self.latitude, longitude: self.longitude)
-        marker.title = "latitude & longitude"
-        marker.snippet = "\(latitude),\(longitude)"
+        marker.position = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+        let label = UILabel()
+        label.text = " latitude & longitude \n \(Double(latitude).rounded(toPlaces: 5)), \(Double(longitude).rounded(toPlaces: 5)) "
+        label.numberOfLines = 2
+        label.backgroundColor = .white
+        label.layer.cornerRadius = 12
+        label.layer.borderWidth = 0.5
+        label.layer.borderColor = UIColor.black.cgColor
+        label.layer.masksToBounds = true
+        label.sizeToFit()
+        marker.iconView = label
+        marker.map = mapView
         marker.map = mapView
     }
 }
@@ -52,23 +61,23 @@ extension GoogleMapsViewController:CLLocationManagerDelegate{
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if let locValue:CLLocationCoordinate2D = (manager.location?.coordinate){
             print("Current Locations = \(locValue.latitude) \(locValue.longitude)")
-            self.latitude = Double(locValue.latitude)
-            self.longitude = Double(locValue.longitude)
-            self.camera = GMSCameraPosition.camera(withLatitude: self.latitude, longitude: self.longitude, zoom: 15.0)
-            self.mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-            self.view.addSubview(mapView)
-            // Creates a marker in the center of the map.
-            addMarker(latitude: self.latitude, longitude: self.longitude)
+            camera = GMSCameraPosition.camera(withLatitude: locValue.latitude,
+                                                  longitude: locValue.longitude,
+                                                  zoom: 12)
+
+            mapView = GMSMapView.map(withFrame: .zero, camera: camera)
+            mapView.delegate = self
+            self.view = mapView
+            addMarker(latitude: locValue.latitude, longitude: locValue.longitude)
         }
     }
 }
 extension GoogleMapsViewController{
     
    func mapView(_ mapView: GMSMapView, didTapAt coordinate: CLLocationCoordinate2D) {
+    self.mapView.clear()
+    self.addMarker(latitude: coordinate.latitude, longitude: coordinate.longitude)
       print("You tapped at \(coordinate.latitude), \(coordinate.longitude)")
-        self.mapView.clear()
-        self.addMarker(latitude: Double(coordinate.latitude), longitude: Double(coordinate.longitude))
 
     }
-    
 }
